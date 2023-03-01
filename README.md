@@ -14,6 +14,61 @@ A través de un menú de inicio se puede iniciar sesión como estudiante o admin
 
 6. Si **cierra sesión** se le lleva al panel principal donde le consulta si usted desea iniciar sesión o cerrar el programa.
 
+**Estructuras**
+  Para la **doblemente enlazada** se creó un nodo de la siguiente manera:
+  type Node struct {
+    Carnet int
+    Nombre string
+    Apellido string
+    Contrasena string
+    Bitacora *bitacoraLogin.SimpleList
+    Next   *Node
+    Prev   *Node
+  }
+  Para la que se supone que recibiría una bitácora del paquete bitacoraLogin de tipo Simplelist, pero ese proceso no pudo ser culminado.
+  La lista doblemente enlazada tiene métodos como: InsertEnd, para insertar los nodos de los estudiantes al final de la lista; OrdenarCarnet para ordenar la    lista cada vez que se le solicitaba; Print que es el método que imprime los datos en consola luego de ser ordenados; Login que busca en la lista que el carnet y  nombre dados existan en alguno de los nodos y retorne un boolean; GenerarJSON es para enviar la lista doble en datos ordenados a un archivo JSON que se usará en las siguientes fases.
+  
+  **Capturas de las susodichas**
+  ![image](https://user-images.githubusercontent.com/99098604/222050990-edc5015f-fffc-4dcb-ad2d-4d874290c439.png)
+![image](https://user-images.githubusercontent.com/99098604/222051058-bb240f49-290d-4e8c-93e5-409039a9ae13.png)
+![image](https://user-images.githubusercontent.com/99098604/222051128-aa0f16f2-1cfd-4ab1-a161-891a9cd2fb8a.png)
+![image](https://user-images.githubusercontent.com/99098604/222051165-c93c883d-04d3-4a4c-82f9-a687956a0aca.png)
+![image](https://user-images.githubusercontent.com/99098604/222051222-7c35e788-3fc5-4a84-8a27-b8be5084e21b.png)
+  
+  Para la **simple** que se refleja en bitacoraAdmin, bitacoraLogin, colaAceptados y colaEstudiantes, se crearon nodos del tipo: 
+  type Node struct {
+	carnet int
+	nombre string
+	apellido string
+	contrasena string
+	queHizo string
+	fecha string
+	next  *Node
+  }
+  type NodeB struct {
+	queHizo string
+	fecha string
+	Next  *NodeB
+  }
+  type Node struct {
+	carnet int
+	nombre string
+	apellido string
+	contrasena string
+	next  *Node
+  }
+  Las listas están por separado pero llevan lógicas similares por tratarse de listas simples. La forma en que difieren es en el tipo de llenado y graficado de las mismas, porque algunas son consideradas pilas y otras consideradas colas. Los métodos que incluían éstas son: Encolar, que añadía los elementos al final de la lista; Apilar, que añadía los objetos al inicio de la lista; EnviarCadaElemento se utilizó para pasar los datos de cada estudiante a la lista doble, al momento; Aceptar y Rechazar eliminaban el nodo que se estaba viendo al principio y retornaba los datos para pasarlos a la lista doble ya estando como aceptados o a la pila ambos para que se registrara en la bitácora del Administrador que indicaba qué acciones realizó sobre los estudiantes; OrdenarCarnet y Login fueron usados al inicio pero retirados para se utilizados en la lista doble directamente; ObtenerDatosPrimero se encargaba de mostrar en consola los datos del primer estudiante para que se aceptara o rechazara en el sistema.
+  
+  **Capturas de las susodichas:**
+  ![image](https://user-images.githubusercontent.com/99098604/222051356-f817709e-ca0e-44b7-805a-165bae0eeef8.png)
+![image](https://user-images.githubusercontent.com/99098604/222051391-851cbe7e-6ae6-4e3c-aa2f-3b747d5e223e.png)
+![image](https://user-images.githubusercontent.com/99098604/222051500-cee97ed8-a103-441f-981d-a362bc209276.png)
+![image](https://user-images.githubusercontent.com/99098604/222051536-a614aa87-b72d-43ec-b61b-05a87f397e86.png)
+![image](https://user-images.githubusercontent.com/99098604/222051562-bc210124-f0b6-4e8f-a389-4b2524b2f310.png)
+![image](https://user-images.githubusercontent.com/99098604/222051644-25e62bcb-9408-4bdc-ae0c-b194d0ffadaa.png)
+![image](https://user-images.githubusercontent.com/99098604/222051686-7e5143cf-d241-40db-857b-38c33de3072d.png)
+![image](https://user-images.githubusercontent.com/99098604/222051754-a9dba120-a84a-4b43-b85b-adb27d9513b8.png)
+  
 **Por qué el proyecto es útil.**
 Porque permite el almacenamiento, administración y manejo de los datos de los estudiantes y su acceso.
 
