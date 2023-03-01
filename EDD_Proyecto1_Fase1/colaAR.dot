@@ -1,0 +1,45 @@
+digraph G {
+node[shape=rectangle, style=filled, color=lightblue];
+rankdir=RL;
+N0[label="Carnet:201700918
+Nombre: Cristian
+Apellido: Suy
+Contraseña: Cris123"];
+N1[label="Carnet:201902259
+Nombre: Lourdes
+Apellido: Reyes
+Contraseña: Lourdes123"];
+N2[label="Carnet:201903549
+Nombre: Alejandro
+Apellido: Caballeros
+Contraseña: Alejandro124"];
+N3[label="Carnet:201900570
+Nombre: Jonatan
+Apellido: Gonzalez
+Contraseña: Jonatan125"];
+N4[label="Carnet:201700653
+Nombre: Kevyn
+Apellido: Girón
+Contraseña: Kevyn126"];
+N5[label="Carnet:202004703
+Nombre: Eduardo
+Apellido: Cuevas
+Contraseña: Eduardo127"];
+N0->N1->N2->N3->N4->N5
+
+}mbre: Eduardo
+Apellido: Cuevas
+Contraseña: Eduardo127"];
+N0->N1->N2->N3->N4->N5->N6
+
+}bre: Eduardo
+Apellido: Cuevas
+Contraseña: Eduardo127"];
+N0->N1->N2->N3->N4->N5->N6->N7
+
+}ardo
+Apellido: Cuevas
+Contraseña: Eduardo127"];
+N0->N1->N2->N3->N4->N5->N6->N7->N8
+
+}

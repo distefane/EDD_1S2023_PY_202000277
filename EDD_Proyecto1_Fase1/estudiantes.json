@@ -1,0 +1,20 @@
+[
+	{
+		"carnet": 201403877,
+		"nombre": "Ebany",
+		"contrasena": "qwerty12",
+		"carpeta_raiz": "/"
+	},
+	{
+		"carnet": 201700918,
+		"nombre": "Cristian",
+		"contrasena": "Cris123",
+		"carpeta_raiz": "/"
+	},
+	{
+		"carnet": 201780044,
+		"nombre": "Leonardo",
+		"contrasena": "leo123",
+		"carpeta_raiz": "/"
+	}
+]

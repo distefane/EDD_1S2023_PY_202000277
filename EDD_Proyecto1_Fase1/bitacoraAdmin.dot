@@ -1,0 +1,14 @@
+digraph G {
+node[shape=rectangle, style=filled, color=lightblue];
+rankdir=RL;
+N0[label="Acción:Se aceptó a
+Nombre: Cristian
+Fecha: 2023-02-28 18:04:40"];
+N1[label="Acción:Se aceptó a
+Nombre: Leonardo
+Fecha: 2023-02-28 18:04:47"];
+N2[label="Acción:Se aceptó a
+Nombre: Ebany
+Fecha: 2023-02-28 18:05:01"];
+
+}
