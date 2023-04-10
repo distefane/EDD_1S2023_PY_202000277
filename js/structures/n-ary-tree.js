@@ -1,10 +1,12 @@
 
 // CLASE NODO 
-class Tnode{
+class Tnode{ 
     
     constructor(folderName){
         this.folderName = folderName;
         this.files = [];
+        //crear una matriz dispersa con sparase-matrix.js
+        this.permisos = new SparseMatrix();
         this.children = []; // TODOS LOS NODOS HIJOS
         this.id = null; // PARA GENERAR LA GRÁFICA
     }
@@ -86,8 +88,13 @@ class Tree{
         // console.log(node.files)
         node.files.map(file => {
             if(file.type === 'text/plain'){
+                const archivo = new Blob([file.content], { type: 'text/plain' });
+                const url = URL.createObjectURL(archivo);
+                /*
                 let archivo = new Blob([file.content], file.type);
                 const url = URL.createObjectURL(archivo);
+                console.log(url)
+                */
                 code += `
                         <div class="col-2 folder">
                         <img src="./imgs/file.png" width="100%"/>
@@ -99,34 +106,6 @@ class Tree{
                     </div>
                 `
             }else{
-                //determinar el tipo de archivo y su icono
-                if (file.type === 'image/jpeg' || file.type === 'image/png') {
-                    code += `
-                        <div class="col-2 folder">
-                            <img src="./imgs/image.png" width="105%"/>
-                            <p class="h6 text-center">
-                                <a href="${file.content}" download>
-                                    ${file.name}
-                                </a>
-                            </p>
-                        </div>
-                    `
-                }
-                else if (file.type === 'application/pdf') {
-                    code += `
-                        <div class="col-2 folder">
-                            <img src="./imgs/pdf.png" width="100%"/>
-                            <p class="h6 text-center">
-                                <a href="${file.content}" download>
-                                    ${file.name}
-                                </a>
-                            </p>
-                        </div>
-                    `
-                }
-                
-                //para txt
-                else if (file.type === 'text/plain') {
                 code += ` <div class="col-2 folder">
                         <img src="./imgs/file.png" width="100%"/>
                         <p class="h6 text-center">
@@ -135,24 +114,63 @@ class Tree{
                             </a>
                         </p>
                     </div>`
-                }
-            
             }
         })
         return code;
     }
 
+    //buscar si el archivo nuevo existe en n-ary-tree y contar cuantos existen con el mismo nombre 
+    searchFile(path, fileName){
+        let temp = this.getFolder(path);
+        let count = 0;
+        temp.files.forEach(file => {
+            if(file.name == fileName){
+                count++;
+            }
+            else if(file.name.split('(')[0] == fileName){
+                count++;
+            }
+        });
+        return count;
+    }
+    //buscar si la carpeta nueva existe en n-ary-tree y contar cuantos existen con el mismo nombre
+    searchFolder(path, folderName){
+        let temp = this.getFolder(path);
+        let count = 0;
+        temp.children.forEach(folder => {
+            if(folder.folderName == folderName){
+                count++;
+            }
+            else if(folder.folderName.split('(')[0] == folderName){
+                count++;
+            }
+        });
+        return count;
+    }
 
-    // insertFile(path, fileName, content, type){
-    //     let temp = this.getFolder(path);
-    //     temp.matriz.insertHeaderOnly(fileName, content, type);
-    // }    
+    /*searchFile(path, fileName){
+        let temp = this.getFolder(path);
+        //let count = 0;
+        let file = temp.files.find(file => file.name == fileName);
+        if(typeof file == 'undefined' || file == null){
+            return false;
+        }
 
-    // matrixGrpah(path){
-    //     let temp = this.getFolder(path);
-    //     console.log(temp.matriz);
-    //     return temp.matriz.graph();
-    // }
+        return true;
+    }*/
+
+/*
+    insertFile(path, fileName, content, type){
+    let temp = this.getFolder(path);
+    temp.matriz.insertHeaderOnly(fileName, content, type);
+    }    
+
+    matrixGrpah(path){
+    let temp = this.getFolder(path);
+    console.log(temp.matriz);
+    return temp.matriz.graph();
+    }
+*/
 }
 
 

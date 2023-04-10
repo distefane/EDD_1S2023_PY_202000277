@@ -53,9 +53,9 @@ class AvlTree{
         }else if(item.carnet < node.item.carnet){
             node.left = this.#insertRecursive(item, node.left);
             console.log(this.getHeight(node.left) - this.getHeight(node.right))
-            //if(this.getHeight(node.left) - this.getHeight(node.right) >= 2 || this.getHeight(node.left) - this.getHeight(node.right) <= -2){
+            //if(this.getHeight(node.left) - this.getHeight(node.right) >= 1 || this.getHeight(node.right) - this.getHeight(node.left) <= 1){
             //if(this.#deep(node.left) - this.#deep(node.right) >= 2 || this.#deep(node.left) - this.#deepRecursive(node.right) <= -2){
-            if(this.#balanceFactor(node) >= 2 || this.#balanceFactor(node) <= -2){
+            if(this.#balanceFactor(node) >= 2 || this.#balanceFactor(node) <= 2){
                 if(item.carnet < node.left.item.carnet){
                     console.log("a2", node.left)
                     node = this.#rotateLeft(node);
@@ -68,9 +68,9 @@ class AvlTree{
             console.log("siempre entra 1")
             console.log("factor de equilibrio1: " + this.#deep(node.right)); 
             console.log("factor de equilibrio2:" + this.#deep(node.left));
-            //if(this.getHeight(node.right) - this.getHeight(node.left) >= 2 || this.getHeight(node.right) - this.getHeight(node.left) <= -2){
+            //if(this.getHeight(node.right) - this.getHeight(node.left) >= 2 || this.getHeight(node.right)-this.getHeight(node.left) <=-2){
             //if(this.#deep(node.right) - this.#deep(node.left) >= 2 || this.#deep(node.right) - this.#deep(node.left) <= -2){
-            if (this.#balanceFactor(node) >= 2 || this.#balanceFactor(node) <= -2){
+            if (this.#balanceFactor(node) >= 2 || this.#balanceFactor(node) <= 2){
                 if(item.carnet < node.right.item.carnet){
                     console.log("a2", node.right)
                     node = this.#rotateRight(node);
@@ -269,7 +269,6 @@ class AvlTree{
         connections = "";
         nivel = 0;
         this.#treeGraphRecursive(this.root);
-        // console.log(nodes,connections);
         return nodes + connections;
     }
 

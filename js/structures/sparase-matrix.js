@@ -1,11 +1,11 @@
 // CLASE NODO
 class Mnode{
-    constructor(x="", y="", value, content, type){
-        this.x = x.toString();
-        this.y = y.toString();
-        this.value = value;
-        this.content = content;
-        this.type = type;
+    constructor(x, y, nArchivo, cUser, permiso){
+        this.x = x;
+        this.y = y;
+        this.value = nArchivo;
+        this.content = cUser;
+        this.type = permiso;
 
         // APUNTADORES
         this.up = null;
@@ -20,7 +20,7 @@ class Mnode{
 class SparseMatrix{
 
     constructor(){
-        this.head =  new Mnode(-1, -1, "Inicio");
+        this.head =  new Mnode(-1, -1, "Inicio", "Inicio", "Inicio");
     }
     
     insertHeaderOnly(y, content, type){
