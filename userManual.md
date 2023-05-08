@@ -1,3 +1,5 @@
+¿Qué hace el proyecto? A través de un menú de inicio se puede iniciar sesión como estudiante o administrador. En el caso de iniciar sesión como estudiante, se busca que exista en el sistema y se procede a pasar. En el caso que se realice un inicio de sesión como administrador se tiene acceso a opciones como: Visualizar la tabla de usuarios registrados y ciertas credenciales, observar todos los permisos intercambiados entre los usuarios. Como usuario usted podrá visualizar los archivos que le fueron compartidos sólo a usted, crear carpetas y archivos y dar permisos también. Así como visualizar la estructura de sus archivos mediante un grafo no dirigido. Se tendría la posibilidad de usar un chat para intercambio de mensajes entre usuarios.
+
 1. Para iniciar, usted deberá ser capaz de ver la pantalla del login:
 
 ![image](https://user-images.githubusercontent.com/99098604/236710104-8742e474-996d-4996-8861-a0da1c29a75e.png)
