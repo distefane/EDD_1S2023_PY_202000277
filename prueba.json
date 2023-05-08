@@ -1,0 +1,123 @@
+{
+	"alumnos": [
+		{
+			"carnet": 8318054,
+			"nombre": "Hugo Rosal", 
+			"password": "Hugo30", 
+			"carpeta_raiz": "/" 
+		},{
+			"carnet": 199919737, 
+			"nombre": "Williams Constanza", 
+			"password": "Williams42", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 200715321, 
+			"nombre": "Jim Melendez", 
+			"password": "Jim67", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 201403877, 
+			"nombre": "Ebany Larios", 
+			"password": "qwerty12", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 201700792,
+			"nombre": "Dennis Escobar", 
+			"password": "Dennis28", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 201700918, 
+			"nombre": "Cristian Suy", 
+			"password": "Cris123", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 201780044,
+			"nombre": "Leonardo Martinez", 
+			"password": "leo123", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 201807169,
+			"nombre": "Erick Chacon", 
+			"password": "Erick91", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 201807351, 
+			"nombre": "Brian Garcia" , 
+			"password": "Brian12", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 201807389, 
+			"nombre": "Gladys Ajuchan", 
+			"password": "Gladys17", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 201902363,
+			"nombre": "Christopher Monterroso", 
+			"password": "Christopher66", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 202000277, 
+			"nombre": "Diana Berducido", 
+			"password": "Diana55", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 202000896,
+			"nombre": "Javier Matias", 
+			"password": "Javier47", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 202001053, 
+			"nombre": "Kevin Hernandez", 
+			"password": "Kevin4", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 202001570, 
+			"nombre": "Nataly Guzman", 
+			"password": "Nataly84", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 202004812,
+			"nombre": "Fredy Quijada", 
+			"password": "Fredy63", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 202100265,
+			"nombre": "Maria Tebalan", 
+			"password": "Maria41", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 202100953, 
+			"nombre": "Damaris Muralles",
+			"password": "Damaris89", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 202104160, 
+			"nombre": "Steven Mejia", 
+			"password": "Steven18", 
+			"carpeta_raiz": "/" 
+		},
+		{
+			"carnet": 202109715,
+			"nombre": "Pablo Barahona", 
+			"password": "Pablo42", 
+			"carpeta_raiz": "/" 
+		}
+	]
+}
